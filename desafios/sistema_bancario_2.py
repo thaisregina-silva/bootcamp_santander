@@ -47,7 +47,7 @@ def depositar(saldo, valor, extrato, /):
 
 def sacar(*, saldo, valor, extrato, limite_valorsaque, n_saque, limite_nsaque):
     excedeu_saldo = valor > saldo
-    excedeu_n_saque = n_saque > limite_nsaque
+    excedeu_n_saque = n_saque >= limite_nsaque
     excedeu_valor_saque = valor > limite_valorsaque
     if excedeu_saldo:
         print(f"Não foi possível realizar a operação. Seu saldo é de R$ {saldo:.2f}")
@@ -58,7 +58,7 @@ def sacar(*, saldo, valor, extrato, limite_valorsaque, n_saque, limite_nsaque):
     elif valor > 0:
         saldo -= valor
         extrato += f"Saque: R${valor:.2f}\n"
-        print(f"Saque de R${valor} realizado com sucesso.")
+        print(f"Saque de R${valor:.2f} realizado com sucesso.")
         n_saque += 1
 
     return saldo, extrato, n_saque
