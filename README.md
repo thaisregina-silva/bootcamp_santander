@@ -28,4 +28,4 @@ Cada arquivo é uma versão aprimorada do projeto de sistema bancário, mostrand
    `cd Desafios`
 
 3. Rode a versão que quiser:  
-   `python sistema_bancario_v1.py` (ou _v2_, _v3_)
+   `python sistema_bancario1.py` (ou _2_, _3_)
